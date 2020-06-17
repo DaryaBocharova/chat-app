@@ -1,5 +1,6 @@
-package chat;
+package chat.chat;
 
+import chat.chat.Channel;
 import com.fasterxml.jackson.databind.ser.std.StringSerializer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerConfig;

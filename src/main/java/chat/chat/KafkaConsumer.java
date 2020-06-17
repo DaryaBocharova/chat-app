@@ -1,4 +1,4 @@
-package chat;
+package chat.chat;
 
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;

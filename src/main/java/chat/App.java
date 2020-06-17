@@ -1,5 +1,7 @@
 package chat;
 
+import chat.chat.KafkaConsumer;
+import chat.chat.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
@@ -29,7 +31,7 @@ public class App {
         while (!"exit".equals(message)){
             message = in.nextLine();
             if ("all".equals(message)){
-                System.out.println("Enter message: ");
+                System.out.println("Введите сообщение: ");
                 String str = in.nextLine();
                 str = login.concat(": ").concat(str);
                 producerCreator.sendBroadCast((Producer<String, String>) producer, str);
