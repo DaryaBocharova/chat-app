@@ -9,8 +9,7 @@ public interface IUserRepository {
 
     User findById(@NotNull final String id);
 
-    User removeById(@NotNull final String id);
+    void remove(@NotNull User user);
 
-    User create( @NotNull final String id,
-                 @NotNull final String name);
+    void persist(@NotNull User user);
 }

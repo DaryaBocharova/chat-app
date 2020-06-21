@@ -2,20 +2,15 @@ package chat.api.service;
 
 import chat.entity.Group;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.springframework.stereotype.Service;
 
 @Service
 public interface IGroupService {
 
-    Group findByIdAndUserId(
-            @NotNull final String id,
-            @NotNull final String userId);
+    Group findById(@NotNull final String id, @NotNull final String userId);
 
-    Group removeByIdAndUserId(
-            @NotNull final String id,
-            @NotNull final String userId);
+    void remove(@Nullable final String id, @Nullable final String userId);
 
-    Group save(
-            @NotNull final String id,
-            @NotNull final String name);
+    void create(@NotNull final String id, @NotNull final String name);
 }

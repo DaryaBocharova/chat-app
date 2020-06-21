@@ -7,10 +7,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface IUserService {
 
-    User create(
-            @NotNull final String id,
-            @NotNull final String name,
-            @NotNull final boolean editChat,
-            @NotNull final String password,
-            @NotNull final String role);
+    void create(@NotNull User user) ;
 }
