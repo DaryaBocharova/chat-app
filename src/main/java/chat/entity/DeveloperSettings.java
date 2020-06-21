@@ -1,6 +1,5 @@
 package chat.entity;
 
-import chat.enumerate.Role;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,8 +10,6 @@ import org.jetbrains.annotations.Nullable;
 import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.Table;
 
 @Getter
@@ -21,15 +18,14 @@ import javax.persistence.Table;
 @Cacheable
 @NoArgsConstructor
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-@Table(name = "User")
-public class User extends AbstractEntity {
+@Table(name = "developer")
+public class DeveloperSettings extends AbstractEntity {
 
     @Nullable
-    @Column(name = "role")
-    @Enumerated(EnumType.STRING)
-    Role role;
+    @Column(name = "fio")
+    String fio;
 
     @Nullable
-    @Column(name = "editChat")
-    boolean editChat;
+    @Column(name = "email")
+    String email;
 }

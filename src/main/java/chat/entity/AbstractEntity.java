@@ -16,7 +16,7 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 @MappedSuperclass
-public abstract class BaseEntity implements Serializable {
+public abstract class AbstractEntity implements Serializable {
 
     @Id
     @Column(name = "id")
